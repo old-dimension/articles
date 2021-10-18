@@ -17,3 +17,19 @@ It is basically saying:
 
 
 - For Placebo refuters, if p-value < 0.05 (or any other specified threshold), zero (the expected/true treatment effect) is very unlikely (<5%) to be covered by the generated placebo distribution, thus the ESTIMATOR (yeah, the upper-level estimator) fails the test.
+
+The developer gives a  [better explanation](https://github.com/microsoft/dowhy/issues/312)  in response to an issue:
+
+
+> For a refutation test, the p-value denotes whether the test has found a problem with the estimate. If p-value <0.05, this means that the estimate has a problem. If not, then we cannot conclude anything.
+
+>Since both p-values are >0.05, it means that the two tests are unable to find a problem in the estimate. Note that refutations test the correctness of the estimating procedure, but not whether the effect is significantly away from zero.
+
+>...
+
+>For placebo test, the p-value measures whether the obtained new effect is significantly different from 0 (since 0 is the correct effect value for a random "placebo" treatment). Since the p-value is > 0.05, it means we cannot conclude that new effect is different from 0.
+
+
+
+
+
